@@ -32,21 +32,21 @@ def start_list():
     myList=["Top"]
     #Create List of Players
     if tim.get()==1:
-        myList.extend(["Timeus"])
+        myList.extend(["Spencer"])
     if sut.get()==1:
-        myList.extend(["Sutar"])
+        myList.extend(["Deb"])
     if tan.get()==1:
-        myList.extend(["Tawnie"])
+        myList.extend(["Moniek"])
     if aul.get()==1:
-        myList.extend(["Alden"])
+        myList.extend(["Taylor"])
     if myr.get()==1:
-        myList.extend(["Myron"])
+        myList.extend(["Skyler"])
     if bad.get()==1:
-        myList.extend(["Badger"])
-    if fi.get()==1:
-        myList.extend(["Fjord"])
-    if er.get()==1:
-        myList.extend(["Erik"])
+        myList.extend(["Tyler"])
+   # if fi.get()==1:
+   #     myList.extend([""])
+   # if er.get()==1:
+   #     myList.extend([""])
     mon=mon_num.get()
     #Create Enemies
     if mon > 25:
@@ -422,14 +422,14 @@ numlist33=IntVar()
 
 #Entry boxes
     #select players
-Checkbutton(monstnum, font= "times 30" , text="Timeus", variable=tim , bg= "grey").place(relx=.3, rely=.4)
-Checkbutton(monstnum, font= "times 30" , text="Sutar", variable=sut , bg= "grey").place(relx=.3, rely=.5)
-Checkbutton(monstnum, font= "times 30" , text="Tawnie", variable=tan , bg= "grey").place(relx=.3, rely=.6)
-Checkbutton(monstnum, font= "times 30" , text="Myron", variable=myr , bg= "grey").place(relx=.3, rely=.7)
-Checkbutton(monstnum, font= "times 30" , text="Alden", variable=aul , bg= "grey").place(relx=.4, rely=.4)
-Checkbutton(monstnum, font= "times 30" , text="Badger", variable=bad , bg= "grey").place(relx=.4, rely=.5)
-Checkbutton(monstnum, font= "times 30" , text="Fjord", variable=fi , bg= "grey").place(relx=.4, rely=.6)
-Checkbutton(monstnum, font= "times 30" , text="Erik", variable=er , bg= "grey").place(relx=.4, rely=.7)
+Checkbutton(monstnum, font= "times 30" , text="Spencer", variable=tim , bg= "grey").place(relx=.3, rely=.4)
+Checkbutton(monstnum, font= "times 30" , text="Deb", variable=sut , bg= "grey").place(relx=.3, rely=.5)
+Checkbutton(monstnum, font= "times 30" , text="Moniek", variable=tan , bg= "grey").place(relx=.3, rely=.6)
+Checkbutton(monstnum, font= "times 30" , text="Taylor", variable=myr , bg= "grey").place(relx=.3, rely=.7)
+Checkbutton(monstnum, font= "times 30" , text="Skyler", variable=aul , bg= "grey").place(relx=.4, rely=.4)
+Checkbutton(monstnum, font= "times 30" , text="Tyler", variable=bad , bg= "grey").place(relx=.4, rely=.5)
+#Checkbutton(monstnum, font= "times 30" , text="Fjord", variable=fi , bg= "grey").place(relx=.4, rely=.6)
+#Checkbutton(monstnum, font= "times 30" , text="Erik", variable=er , bg= "grey").place(relx=.4, rely=.7)
     #Number of Enemies
 Entry(monstnum,font= "times 25" , textvariable= mon_num).place(relx=.65, rely=.5,anchor="center")
     #New Enemy Initiative
