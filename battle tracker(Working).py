@@ -78,6 +78,25 @@ def start_list():
     while j < 35:
         Label(init, font="time 10", bg="grey",width=15, text=" ").grid(row=j, column=0)
         j+=1
+        
+    #Create battle List
+    i=len(myList)
+    j=(1)
+    i -=1
+    while i>0:   
+        Label(battle, font="time 10", relief=RIDGE,width=15, text = myList[j]).grid(row=j, column=0)
+        i -=1
+        j +=1
+    Label(battle, font="time 10", relief=RIDGE,width=15, text = myList[0]).grid(row=0, column=0)
+    Label(battle, font="time 10", relief=RIDGE,width=15, text = "Description").grid(row=0, column=1)
+    Label(battle, font="time 10", relief=RIDGE,width=15, text = "Current HP").grid(row=0, column=2)
+    k=35-j
+    cover2.grid(row=j, column=1)
+    cover3.grid(row=j, column=2)
+    while j < 35:
+        Label(battle, font="time 10", bg="grey",width=15, text=" ").grid(row=j, column=0)
+        j+=1
+
     #Create Global list of people 
     global mylist
     mylist=myList
@@ -302,6 +321,9 @@ def add_enemy():
     it[0]-=1
     nextp()
     #Create Battle Message
+    Label(battle, font="time 10", relief=RIDGE,width=15, text = string).grid(row=len(final)-1, column=0)
+    cover2.grid(row=len(final), column=1)
+    cover3.grid(row=len(final), column=2)
     Label(battle, bg="grey", font="time 30",width=8, text =("joined")).place(relx=.54, rely=.8, anchor="center")
     Label(battle, bg="grey", font="time 30",width=8, text =(string)).place(relx=.46, rely=.8, anchor="center")
 
@@ -436,7 +458,7 @@ Entry(monstnum,font= "times 25" , textvariable= mon_num).place(relx=.65, rely=.5
 Entry(battle,font= "Times 30", width=5,textvariable=newinit).place(relx=.8, rely=.7, anchor="center")
     #Name to be Killed
 kill_name=Entry(battle,font= "Times 30", width=15)
-kill_name.place(relx=.2, rely=.7, anchor="center")
+kill_name.place(relx=.3, rely=.7, anchor="center")
     #Enemy Initiative
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist1).grid(row=1, column=1)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist2).grid(row=2, column=1)
@@ -469,8 +491,80 @@ Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist28).grid(
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist29).grid(row=29, column=1)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist30).grid(row=30, column=1)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist31).grid(row=31, column=1)
-Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist32).grid(row=32, column=1)
-Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist33).grid(row=33, column=1)
+##Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist32).grid(row=32, column=1)
+##Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist33).grid(row=33, column=1)
+    #Damage tracker
+
+#Enimy identifier 
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=1, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=2, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=3, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=4, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=5, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=6, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=7, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=8, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=9, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=10, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=11, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=12, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=13, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=14, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=15, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=16, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=17, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=18, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=19, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=20, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=21, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=22, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=23, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=24, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=25, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=26, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=27, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=28, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=29, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=30, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=31, column=1)
+##Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=32, column=1)
+##Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=33, column=1)
+
+#Damage
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=1, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=2, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=3, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=4, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=5, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=6, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=7, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=8, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=9, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=10, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=11, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=12, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=13, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=14, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=15, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=16, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=17, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=18, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=19, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=20, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=21, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=22, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=23, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=24, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=25, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=26, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=27, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=28, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=29, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=30, column=2)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=31, column=2)
+##Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=32, column=1)
+##Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=33, column=1)
+
 
 #Labels
     #Titles
@@ -492,6 +586,12 @@ Label(battle, font="time 60", width=4 ,text = 30).place(relx=.9, rely=.2, anchor
 cover=Label(init, bg="grey",width=15, height=50,)
 cover.grid(row=1, column=1 , rowspan=40)
 
+cover2=Label(battle, bg="grey",width=15, height=50,)
+cover2.grid(row=1, column=1 , rowspan=33)
+
+cover3=Label(battle, bg="grey",width=15, height=50,)
+cover3.grid(row=1, column=1 , rowspan=33)
+
 # buttons
     #movemnt between windows 
 Button(start, font="times 30 bold", text = 'Start Battle',command = lambda:chng_frame(monstnum), bg='green').place(relx=.5, rely=.6, anchor="center")
@@ -504,7 +604,7 @@ Button(finish, font="times 25 bold", text = 'Exit',command = root.destroy, bg='r
 Button(battle, font="times 30 bold", text = 'Next',command = lambda:nextp(), bg='green').place(relx=.5, rely=.5, anchor="center")
 Button(battle, font="times 30 bold", text = 'Start Timer',command = lambda:start_time(), bg='green').place(relx=.9, rely=.3, anchor="center")
 Button(battle, font="times 30 bold", text = 'Stop Timer',command = lambda:stop_time(), bg='red').place(relx=.9, rely=.1, anchor="center")
-Button(battle, font="times 40",command = lambda:kill(), bg="red", text='Kill').place(relx=.2, rely=.8, anchor="center")
+Button(battle, font="times 40",command = lambda:kill(), bg="red", text='Kill').place(relx=.3, rely=.8, anchor="center")
 Button(battle, font="times 40",command = lambda:add_enemy(), bg="orange", text='Add Enemy').place(relx=.8, rely=.8, anchor="center")
 
 #Start Gui  
