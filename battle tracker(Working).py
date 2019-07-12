@@ -43,10 +43,10 @@ def start_list():
         myList.extend(["Skyler"])
     if bad.get()==1:
         myList.extend(["Tyler"])
-   # if fi.get()==1:
-   #     myList.extend([""])
-   # if er.get()==1:
-   #     myList.extend([""])
+##    if fi.get()==1:
+##        myList.extend([""])
+##    if er.get()==1:
+##        myList.extend([""])
     mon=mon_num.get()
     #Create Enemies
     if mon > 25:
@@ -185,12 +185,12 @@ def sort_init():
     if i>0:
         init.extend([numlist31.get()])
         i-=1
-    if i>0:
-        init.extend([numlist32.get()])
-        i-=1
-    if i>0:
-        init.extend([numlist33.get()])
-        i-=1
+##    if i>0:
+##        init.extend([numlist32.get()])
+##        i-=1
+##    if i>0:
+##        init.extend([numlist33.get()])
+##        i-=1
     #Sort List by inititative 
     j=len(mylist)
     k=40
@@ -324,7 +324,7 @@ def kill():
 #Timer funtions        
 def start_time ():
     j=30
-    Label(battle, font="time 60", width=4 ,text = j).place(relx=.1, rely=.2, anchor="center")
+    Label(battle, font="time 60", width=4 ,text = j).place(relx=.9, rely=.2, anchor="center")
     while j >= 0:
         if stop[0] == 1:
             j=0
@@ -342,7 +342,7 @@ def stop_time ():
     stop[0]=1
 
 def wait(j):
-    Label(battle, font="time 60", width=4 ,text = j).place(relx=.1, rely=.2, anchor="center")
+    Label(battle, font="time 60", width=4 ,text = j).place(relx=.9, rely=.2, anchor="center")
     root.update()
     #waits 1 second
     if j!=0:
@@ -379,8 +379,8 @@ tan = IntVar()
 myr = IntVar()
 aul = IntVar()
 bad = IntVar()
-fi = IntVar()
-er = IntVar()
+##fi = IntVar()
+##er = IntVar()
     #Number of Enemies 
 mon_num = IntVar()
     #New Enemy Initiative
@@ -425,10 +425,10 @@ numlist33=IntVar()
 Checkbutton(monstnum, font= "times 30" , text="Spencer", variable=tim , bg= "grey").place(relx=.3, rely=.4)
 Checkbutton(monstnum, font= "times 30" , text="Deb", variable=sut , bg= "grey").place(relx=.3, rely=.5)
 Checkbutton(monstnum, font= "times 30" , text="Moniek", variable=tan , bg= "grey").place(relx=.3, rely=.6)
-Checkbutton(monstnum, font= "times 30" , text="Taylor", variable=myr , bg= "grey").place(relx=.3, rely=.7)
+Checkbutton(monstnum, font= "times 30" , text="Taylor", variable=myr , bg= "grey").place(relx=.4, rely=.6)
 Checkbutton(monstnum, font= "times 30" , text="Skyler", variable=aul , bg= "grey").place(relx=.4, rely=.4)
 Checkbutton(monstnum, font= "times 30" , text="Tyler", variable=bad , bg= "grey").place(relx=.4, rely=.5)
-#Checkbutton(monstnum, font= "times 30" , text="Fjord", variable=fi , bg= "grey").place(relx=.4, rely=.6)
+#Checkbutton(monstnum, font= "times 30" , text="Fjord", variable=fi , bg= "grey").place(relx=.3, rely=.7)
 #Checkbutton(monstnum, font= "times 30" , text="Erik", variable=er , bg= "grey").place(relx=.4, rely=.7)
     #Number of Enemies
 Entry(monstnum,font= "times 25" , textvariable= mon_num).place(relx=.65, rely=.5,anchor="center")
@@ -487,7 +487,7 @@ Label(battle, bg="grey", font="time 50",width=10, text =("Current")).place(relx=
 Label(battle, bg="grey", font="time 50",width=10, text =("On Deck")).place(relx=.7, rely=.4, anchor="center")
 Label(battle, bg="grey", font="time 30", text =("New Enemy Initiative")).place(relx=.8, rely=.65, anchor="center")
     #Timer
-Label(battle, font="time 60", width=4 ,text = 30).place(relx=.1, rely=.2, anchor="center")
+Label(battle, font="time 60", width=4 ,text = 30).place(relx=.9, rely=.2, anchor="center")
     #Covers
 cover=Label(init, bg="grey",width=15, height=50,)
 cover.grid(row=1, column=1 , rowspan=40)
@@ -502,8 +502,8 @@ Button(finish, font="times 30 bold", text = 'Start a New Battle',command = lambd
 Button(finish, font="times 25 bold", text = 'Exit',command = root.destroy, bg='red').place(relx=.5, rely=.7, anchor="center")
     #Battle Buttons
 Button(battle, font="times 30 bold", text = 'Next',command = lambda:nextp(), bg='green').place(relx=.5, rely=.5, anchor="center")
-Button(battle, font="times 30 bold", text = 'Start Timer',command = lambda:start_time(), bg='green').place(relx=.1, rely=.3, anchor="center")
-Button(battle, font="times 30 bold", text = 'Stop Timer',command = lambda:stop_time(), bg='red').place(relx=.1, rely=.1, anchor="center")
+Button(battle, font="times 30 bold", text = 'Start Timer',command = lambda:start_time(), bg='green').place(relx=.9, rely=.3, anchor="center")
+Button(battle, font="times 30 bold", text = 'Stop Timer',command = lambda:stop_time(), bg='red').place(relx=.9, rely=.1, anchor="center")
 Button(battle, font="times 40",command = lambda:kill(), bg="red", text='Kill').place(relx=.2, rely=.8, anchor="center")
 Button(battle, font="times 40",command = lambda:add_enemy(), bg="orange", text='Add Enemy').place(relx=.8, rely=.8, anchor="center")
 
