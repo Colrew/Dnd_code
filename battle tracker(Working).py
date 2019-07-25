@@ -33,21 +33,21 @@ def start_list():
     myList=["Top"]
     #Create List of Players
     if tim.get()==1:
-        myList.extend(["Spencer"])
+        myList.extend(["Varis"])
     if sut.get()==1:
-        myList.extend(["Deb"])
+        myList.extend(["Mazikeen"])
     if tan.get()==1:
-        myList.extend(["Moniek"])
+        myList.extend(["Aude"])
     if aul.get()==1:
-        myList.extend(["Taylor"])
+        myList.extend(["Minsc"])
     if myr.get()==1:
-        myList.extend(["Skyler"])
+        myList.extend(["Valas"])
     if bad.get()==1:
-        myList.extend(["Tyler"])
-##    if fi.get()==1:
-##        myList.extend([""])
-##    if er.get()==1:
-##        myList.extend([""])
+        myList.extend(["Onn"])
+    if fi.get()==1:
+        myList.extend(["Grendel"])
+    if er.get()==1:
+        myList.extend(["PC"])
     mon=mon_num.get()
     #Create Enemies
     if mon > 25:
@@ -100,6 +100,14 @@ def start_list():
     while j < 35:
         Label(battle, font="time 10", bg="grey",width=15, text=" ").grid(row=j, column=0)
         j+=1
+    hplist1.set(11)
+    hplist2.set(17)
+    hplist3.set(17)
+    hplist4.set(20)
+    hplist5.set(18)
+    hplist6.set(24)
+    hplist7.set(22)
+    hplist8.set(0)
 
     #Create Global list of people 
     global mylist
@@ -208,12 +216,12 @@ def sort_init():
     if i>0:
         init.extend([numlist31.get()])
         i-=1
-##    if i>0:
-##        init.extend([numlist32.get()])
-##        i-=1
-##    if i>0:
-##        init.extend([numlist33.get()])
-##        i-=1
+    if i>0:
+        init.extend([numlist32.get()])
+        i-=1
+    if i>0:
+        init.extend([numlist33.get()])
+        i-=1
     #Sort List by inititative 
     j=len(mylist)
     k=40
@@ -339,12 +347,12 @@ def sort_init():
     if i>0:
         hp.extend([hplist31.get()])
         i-=1
-##    if i>0:
-##        hp.extend([hplist32.get()])
-##        i-=1
-##    if i>0:
-##        hp.extend([hplist33.get()])
-##        i-=1
+    if i>0:
+        hp.extend([hplist32.get()])
+        i-=1
+    if i>0:
+        hp.extend([hplist33.get()])
+        i-=1
         #show hp
     i=len(final)
     j=(1)
@@ -599,12 +607,12 @@ def dodamage():
     if i>0:
         hurt.extend([hurt31.get()])
         i-=1
-##    if i>0:
-##        hurt.extend([hurt32.get()])
-##        i-=1
-##    if i>0:
-##        hurt.extend([hurt33.get()])
-##        i-=1
+    if i>0:
+        hurt.extend([hurt32.get()])
+        i-=1
+    if i>0:
+        hurt.extend([hurt33.get()])
+        i-=1
     #do damage
     global hp
     i=len(final)
@@ -653,8 +661,8 @@ def dodamage():
     hurt29.set(0)
     hurt30.set(0)
     hurt31.set(0)
-    ##hurt32.set(0)
-    ##hurt33.set(0)
+    hurt32.set(0)
+    hurt33.set(0)
 
 # create window object
 root = Tk()
@@ -680,8 +688,8 @@ tan = IntVar()
 myr = IntVar()
 aul = IntVar()
 bad = IntVar()
-##fi = IntVar()
-##er = IntVar()
+fi = IntVar()
+er = IntVar()
     #Number of Enemies 
 mon_num = IntVar()
     #New Enemy Initiative
@@ -718,8 +726,8 @@ numlist28=IntVar()
 numlist29=IntVar()
 numlist30=IntVar()
 numlist31=IntVar()
-##numlist32=IntVar()
-##numlist33=IntVar()
+numlist32=IntVar()
+numlist33=IntVar()
 
     #Enemy hp
 hplist1=IntVar()
@@ -753,8 +761,8 @@ hplist28=IntVar()
 hplist29=IntVar()
 hplist30=IntVar()
 hplist31=IntVar()
-##hplist32=IntVar()
-##hplist33=IntVar()
+hplist32=IntVar()
+hplist33=IntVar()
 hpnew=IntVar()
 
     #damage done
@@ -789,19 +797,19 @@ hurt28=IntVar()
 hurt29=IntVar()
 hurt30=IntVar()
 hurt31=IntVar()
-##hurt32=IntVar()
-##hurt33=IntVar()
+hurt32=IntVar()
+hurt33=IntVar()
 
 #Entry boxes
     #select players
-Checkbutton(monstnum, font= "times 30" , text="Spencer", variable=tim , bg= "grey").place(relx=.3, rely=.4)
-Checkbutton(monstnum, font= "times 30" , text="Deb", variable=sut , bg= "grey").place(relx=.3, rely=.5)
-Checkbutton(monstnum, font= "times 30" , text="Moniek", variable=tan , bg= "grey").place(relx=.3, rely=.6)
-Checkbutton(monstnum, font= "times 30" , text="Taylor", variable=myr , bg= "grey").place(relx=.4, rely=.6)
-Checkbutton(monstnum, font= "times 30" , text="Skyler", variable=aul , bg= "grey").place(relx=.4, rely=.4)
-Checkbutton(monstnum, font= "times 30" , text="Tyler", variable=bad , bg= "grey").place(relx=.4, rely=.5)
-#Checkbutton(monstnum, font= "times 30" , text="Fjord", variable=fi , bg= "grey").place(relx=.3, rely=.7)
-#Checkbutton(monstnum, font= "times 30" , text="Erik", variable=er , bg= "grey").place(relx=.4, rely=.7)
+Checkbutton(monstnum, font= "times 30" , text="Varis", variable=tim , bg= "grey").place(relx=.3, rely=.4)
+Checkbutton(monstnum, font= "times 30" , text="Mazikeen", variable=sut , bg= "grey").place(relx=.3, rely=.5)
+Checkbutton(monstnum, font= "times 30" , text="Aude", variable=tan , bg= "grey").place(relx=.3, rely=.6)
+Checkbutton(monstnum, font= "times 30" , text="Minsc", variable=myr , bg= "grey").place(relx=.4, rely=.6)
+Checkbutton(monstnum, font= "times 30" , text="Valas", variable=aul , bg= "grey").place(relx=.4, rely=.4)
+Checkbutton(monstnum, font= "times 30" , text="Onn", variable=bad , bg= "grey").place(relx=.4, rely=.5)
+Checkbutton(monstnum, font= "times 30" , text="Grendel", variable=fi , bg= "grey").place(relx=.3, rely=.7)
+Checkbutton(monstnum, font= "times 30" , text="PC", variable=er , bg= "grey").place(relx=.4, rely=.7)
     #Number of Enemies
 Entry(monstnum,font= "times 25" , textvariable= mon_num).place(relx=.65, rely=.5,anchor="center")
     #New Enemy Initiative
@@ -842,8 +850,8 @@ Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist28).grid(
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist29).grid(row=29, column=1)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist30).grid(row=30, column=1)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist31).grid(row=31, column=1)
-##Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist32).grid(row=32, column=1)
-##Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist33).grid(row=33, column=1)
+Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist32).grid(row=32, column=1)
+Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=numlist33).grid(row=33, column=1)
     #Enemy HP
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist1).grid(row=1, column=2)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist2).grid(row=2, column=2)
@@ -876,8 +884,8 @@ Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist28).grid(r
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist29).grid(row=29, column=2)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist30).grid(row=30, column=2)
 Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist31).grid(row=31, column=2)
-##Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist32).grid(row=32, column=2)
-##Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist33).grid(row=33, column=2)
+Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist32).grid(row=32, column=2)
+Entry(init,font= "times 10", relief=RIDGE,width=15,textvariable=hplist33).grid(row=33, column=2)
     #Damage tracker
 
 #Enimy identifier 
@@ -912,8 +920,8 @@ Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=28, column=1)
 Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=29, column=1)
 Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=30, column=1)
 Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=31, column=1)
-##Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=32, column=1)
-##Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=33, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=32, column=1)
+Entry(battle,font= "times 10", relief=RIDGE,width=15).grid(row=33, column=1)
 
 #Damage
 Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt1).grid(row=1, column=3)
@@ -947,8 +955,8 @@ Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt28).grid(ro
 Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt29).grid(row=29, column=3)
 Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt30).grid(row=30, column=3)
 Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt31).grid(row=31, column=3)
-##Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt32).grid(row=32, column=3)
-##Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt33).grid(row=33, column=3)
+Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt32).grid(row=32, column=3)
+Entry(battle,font= "times 10", relief=RIDGE,width=5,textvariable=hurt33).grid(row=33, column=3)
     
 
 
